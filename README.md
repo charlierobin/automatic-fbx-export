@@ -1,6 +1,6 @@
 # Automatic FBX Export for Cinema 4D
 
-Automates saving a Cinema 4D document and simultaneously exporting an FBX version to another path
+Automates saving a Cinema 4D document and simultaneously exporting an FBX version to another path.
 
 If you put Cinema 4D files into a Unity asset directort, Unity basically fires up a behind-the-scenes command line version of Cinema 4D and uses it to export an FBX out of your C4D file.
 
