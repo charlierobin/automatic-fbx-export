@@ -15,7 +15,7 @@ class OptionsDialog( gui.GeDialog ):
         self.path = ""
         self.wasOkayed = False
     
-        if self.currentString is "": self.currentString = "(nothing)"
+        if self.currentString == "": self.currentString = "(nothing)"
         
     def CreateLayout( self ):
         
@@ -87,7 +87,7 @@ class GetPath( plugins.CommandData ):
         defaultString = documentBaseContainer[ k.PATH_FOR_FBX ]
         currentString = documentBaseContainer[ k.PATH_FOR_FBX ]
         
-        if defaultString is "":
+        if defaultString == "":
             
             defaultString = doc.GetDocumentName()
             defaultString, extension = os.path.splitext( defaultString )
@@ -108,7 +108,7 @@ class AutomaticFBXExport( plugins.CommandData ):
         documentBaseContainer = GetDocumentPluginData( doc )
         path = documentBaseContainer[ k.PATH_FOR_FBX ]
 
-        if path is None or path is "":
+        if path is None or path == "":
             gui.MessageDialog( "Please specifiy a path for your FBX export." )
             return True
         
